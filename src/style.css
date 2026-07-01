@@ -4,7 +4,7 @@
  * Inspired by Apple, Linear, Stripe, and Notion.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 
 :root {
   /* Colors */
@@ -29,8 +29,8 @@
   --shadow-premium: 0 20px 40px rgba(15, 47, 36, 0.03);
   
   /* Typography */
-  --font-heading: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: sans-serif;
+  --font-body: sans-serif;
   
   /* Spacing & Transitions */
   --transition-fast: 0.15s ease;
