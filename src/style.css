@@ -4,7 +4,7 @@
  * Inspired by Apple, Linear, Stripe, and Notion.
  */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 :root {
   /* Colors */
@@ -29,8 +29,8 @@
   --shadow-premium: 0 20px 40px rgba(15, 47, 36, 0.03);
   
   /* Typography */
-  --font-heading: sans-serif;
-  --font-body: sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
   
   /* Spacing & Transitions */
   --transition-fast: 0.15s ease;
@@ -221,14 +221,14 @@ a {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(18, 56, 42, 0.1); /* Subtle dark glass before scroll */
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   transition: all var(--transition-normal);
 }
 
 .header-scrolled {
-  background-color: rgba(15, 47, 36, 0.85); /* Solid dark glass on scroll */
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 0.25rem 0;
 }
 
@@ -325,7 +325,7 @@ a {
   padding-bottom: 7rem;
   overflow: hidden;
   position: relative;
-  background-color: #12382A; /* Softened deep green */
+  background: radial-gradient(circle at center, #0F221B 0%, #081410 100%); /* Softer, deep low-saturation green for high contrast */
 }
 
 .hero-content {
@@ -979,4 +979,86 @@ a {
 @keyframes float-5 { 0% { top: 45%; left: 20%; transform: scale(1); } 100% { top: 85%; left: 50%; transform: scale(1.05); } }
 @keyframes float-6 { 0% { top: 30%; left: 80%; transform: scale(0.95); } 100% { top: 55%; left: 15%; transform: scale(1.15); } }
 @keyframes float-7 { 0% { top: 60%; left: 60%; transform: scale(1.05); } 100% { top: 25%; left: 90%; transform: scale(0.85); } }
+
+/* V1 Badges, Icon Containers & Rollbacks */
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-heading);
+}
+
+.badge-gold-light-bg {
+  background-color: var(--gold-accent-light);
+  color: var(--gold-accent);
+}
+
+.badge-green {
+  background-color: rgba(15, 47, 36, 0.05);
+  color: var(--primary-green);
+}
+
+.badge-gold-dark-bg {
+  background-color: rgba(185, 145, 76, 0.15);
+  color: var(--gold-accent);
+}
+
+.card-icon-container {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: var(--border-radius-full);
+  background-color: var(--gold-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-green);
+}
+
+.card-icon-container svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.benefit-icon-container {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--border-radius-full);
+  background-color: rgba(15, 47, 36, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--primary-green);
+}
+
+.benefit-icon-container svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.section-header {
+  margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* Hide V2 benefit number layout */
+.benefit-number {
+  display: none;
+}
+
 
